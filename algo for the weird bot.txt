@@ -1,0 +1,213 @@
+---------------------------------------------------------------------------------------stage 1------------------------------------------------------------------------------------------------------
+take input
+take prev_answer (null first time)
+if ( prev_answer = question in database )
+{
+	//do nothing
+}
+else
+{
+	save in database:
+		question = prev_answer
+		answer = input
+}
+
+
+if (input = question in database)
+{
+	new_output = value
+}
+else
+{
+	new_output = input
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------stage 2------------------------------------------------------------------------------------------------------
+take input							HOW ARE YOU
+take prev_answer (null first time)				HELLO
+if ( prev_answer = question in database )				if ( HELLO as a question)
+{
+	if ( answer = input )					if ( answer to HELLO = HOW ARE YOU?)
+	{
+		update in database:
+			score++				SCORE ++
+			where question = prev_answer		where (question = HELLO and answer = HOW ARE YOU?)
+			and answer = input
+	}
+	else
+	{
+		//do nothing
+	}
+}
+else
+{
+	save in database:
+		question = prev_answer
+		answer = input
+}
+
+
+if (input = question in database)
+{
+	new_output = value
+}
+else
+{
+	new_output = input
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------stage 3------------------------------------------------------------------------------------------------------
+take input							HOW ARE YOU
+take prev_answer (null first time)				HELLO
+if ( prev_answer = question in database )				if ( HELLO as a question)
+{
+	if ( answer = input )					if ( answer to HELLO = HOW ARE YOU?)
+	{
+		update in database:
+			score++				SCORE ++
+			where question = prev_answer		where (question = HELLO and answer = HOW ARE YOU?)
+			and answer = input
+	}
+	else
+	{
+		save in database:
+			question = prev_answer
+			answer = input
+	}
+}
+else
+{
+	save in database:
+		question = prev_answer
+		answer = input
+}
+
+
+if (input = question in database)
+{
+	new_output = value
+}
+else
+{
+	new_output = input
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------stage 4------------------------------------------------------------------------------------------------------
+take input							HOW ARE YOU
+take prev_answer (null first time)				HELLO
+if ( prev_answer = question in database )				if ( HELLO as a question)
+{
+	if ( answer = input )					if ( answer to HELLO = HOW ARE YOU?)
+	{
+		update in database:
+			score++				SCORE ++
+			where question = prev_answer		where (question = HELLO and answer = HOW ARE YOU?)
+			and answer = input
+	}
+	else
+	{
+		save in database:
+			question = prev_answer
+			answer = input
+	}
+}
+else
+{
+	save in database:
+		question = prev_answer
+		answer = input
+}
+
+
+if (input = question in database order by score desc)
+{
+	new_output = value
+}
+else
+{
+	new_output = input
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------stage 4 (use anagrams and LIKE in sql)------------------------------------------------------------------------------------------------------
+take input							HOW ARE YOU
+take prev_answer (null first time)				HELLO
+if ( prev_answer = question in database )				if ( HELLO as a question)
+{
+	if ( answer = input )					if ( answer to HELLO = HOW ARE YOU?)
+	{
+		update in database:
+			score++				SCORE ++
+			where question = prev_answer		where (question = HELLO and answer = HOW ARE YOU?)
+			and answer = input
+	}
+	else
+	{
+		save in database:
+			question = prev_answer
+			answer = input
+	}
+}
+else
+{
+	save in database:
+		question = prev_answer
+		answer = input
+}
+
+
+if (input = question in database order by score desc)
+{
+	new_output = value
+}
+else
+{
+	new_output = input
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------stage 5 (use categories)------------------------------------------------------------------------------------------------------
+take input							HOW ARE YOU
+take prev_answer (null first time)				HELLO
+if ( prev_answer = question in database )				if ( HELLO as a question)
+{
+	if ( answer = input )					if ( answer to HELLO = HOW ARE YOU?)
+	{
+		update in database:
+			score++				SCORE ++
+			where question = prev_answer		where (question = HELLO and answer = HOW ARE YOU?)
+			and answer = input
+	}
+	else
+	{
+		save in database:
+			question = prev_answer
+			answer = input
+	}
+}
+else
+{
+	save in database:
+		question = prev_answer
+		answer = input
+}
+
+
+if (input = question in database order by score desc)
+{
+	new_output = value
+}
+else
+{
+	new_output = input
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
