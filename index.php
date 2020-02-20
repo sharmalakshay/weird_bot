@@ -31,7 +31,7 @@
      <label for="input_field">Input:</label>
      <input type="text" id="input_field" name="input_field" class="form-control"/>
    </div>
-   <button type="button" id="send_button" class="btn btn-primary" onclick="send_ajax()">Submit</button>
+   <button type="button" id="send_button" class="btn btn-primary" onclick="send_ajax()">Send</button>
    <button type="button" class="btn btn-success" onclick="train_the_bot()">Load training file</button>
    <div class="form-group">
      <label for="output_field">Output:</label>
@@ -41,9 +41,9 @@
 </div>
 
 <script>
+
   function send_ajax(){
     var $form = $("#main_form");
-    var output = $("#output_field").html();
     var serializedData = $form.serialize();
     $.post('send_ajax.php', serializedData, function(response) {
       console.log("Response: "+response);
@@ -51,23 +51,25 @@
     });
   }
 
-  async function sendLine(item, index){
-    await new Promise(r => setTimeout(r, 2000)); //this works
-    console.log(index, item);
-    await new Promise(r => setTimeout(r, 2000)); //this doesnt
+  async function start_training(text){
+    var array = text.split("\n");
+    for(var i=0; i<array.length; i++){
+      $("#input_field").val(array[i]);
+      send_ajax();
+      let promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("done!"), 500)
+      });
+      let result = await promise;
+    }
+    console.log("Training complete");
   }
 
   function train_the_bot(){
-
-    var abc;
-    fetch('test_train.txt')
+    fetch('training_data.txt')
     .then(response => response.text())
-    .then(text => {
-      var array = text.split('\n');
-      array.forEach(sendLine);
-    });
-
+    .then(text => start_training(text));
   }
+
 </script>
 
 </body>
