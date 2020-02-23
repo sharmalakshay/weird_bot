@@ -1,4 +1,5 @@
 <?php
+
 if(!isset($_SESSION)){
   session_start();
 }
@@ -18,9 +19,17 @@ function print_lak($arr){
   }
   echo "<br>";
   foreach($arr as $child => $val) {
-     echo "<b>$child</b> = $val <br>";
+    if(!is_array($val)){
+      echo "<b>$child</b> = $val <br>";
+    }
+    else{
+      echo "<b>$child = {</b><div style='padding-left:1em;'>";
+      print_lak($val);
+      echo "</div><b>}</b><br>";
+    }
   }
   echo "<br>";
 }
+
 
 ?>

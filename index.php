@@ -65,9 +65,12 @@
   }
 
   function train_the_bot(){
-    fetch('training_data.txt')
-    .then(response => response.text())
-    .then(text => start_training(text));
+    var filename = prompt("filename =");
+    if(filename!=null){
+      fetch(filename)
+      .then(response => response.text())
+      .then(text => start_training(text));
+    }
   }
 
 </script>
